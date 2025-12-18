@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+h1 { text-align: center; color: #2c3e50; }
+form { text-align: center; margin: 30px 0; }
+input[type="file"] { padding: 10px; font-size: 16px; }
+button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover { background-color: #2980b9; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; }
+th { background-color: #f2f2f2; }
+.high-risk { color: red; font-weight: bold; }
+.low-risk { color: green; }
+.error { color: red; font-weight: bold; margin: 20px 0; }
+footer { margin-top: 50px; text-align: center; color: #777; font-size: 0.9em; }
+
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: 1px solid #ffeaa7;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.download-btn:hover {
+    background-color: #219a52;
+}

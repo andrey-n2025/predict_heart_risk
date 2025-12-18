@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предсказание риска сердечного приступа</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Сервис предсказания риска сердечного приступа</h1>
+        <p>Загрузите CSV-файл с тестовыми данными пациентов. Файл должен содержать колонку <code>id</code> и признаки в формате, аналогичном обучающим данным.</p>
+        
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv" required>
+            <button type="submit">Получить предсказания</button>
+        </form>
+
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if predictions %}
+            <h2>Результаты предсказаний</h2>
+            
+            <!-- Кнопка скачивания CSV через data-uri (работает во всех браузерах) -->
+            <div style="margin: 20px 0; text-align: center;">
+                <a href="data:text/csv;charset=utf-8,{{ csv_data | urlencode }}" 
+                   download="{{ filename | default('predictions.csv') }}" 
+                   class="download-btn">
+                    Скачать результаты в CSV
+                </a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID пациента</th>
+                        <th>Предсказанный риск (1 — высокий риск)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in predictions %}
+                    <tr>
+                        <td>{{ row.id }}</td>
+                        <td class="{% if row.prediction == 1 %}high-risk{% else %}low-risk{% endif %}">
+                            {{ row.prediction }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p>Всего загружено записей: {{ total_uploaded }}<br>
+               Обработано валидных записей: {{ valid_predictions }}<br>
+               Удалено строк с пропусками: {{ rows_dropped }}</p>
+        {% endif %}
+
+        <footer>
+            <p>Представленный сервис прогнозирования сердечных рисков разработан исключительно в образовательных целях.</p>
+			<p>Он не является медицинским инструментом и не может использоваться для реальной диагностики или принятия клинических решений.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+  

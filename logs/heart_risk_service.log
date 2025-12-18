@@ -1,0 +1,52 @@
+2025-12-18 08:07:25 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 08:11:40 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 14:46:59 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 15:15:43 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 15:18:26 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: This 'Pipeline' has no attribute 'transform'
+2025-12-18 15:20:33 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 15:25:23 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 15:37:32 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 15:45:24 [ERROR] preprocessor (preprocessor.py:121): Ошибка предобработки: 'stress_level'
+2025-12-18 15:45:24 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: 'stress_level'
+2025-12-18 15:51:28 [ERROR] preprocessor (preprocessor.py:124): Ошибка предобработки: 'stress_level'
+2025-12-18 15:51:28 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: 'stress_level'
+2025-12-18 15:57:36 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 16:17:24 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 16:44:51 [ERROR] model (model.py:38): Ошибка при предсказании: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 16:44:51 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-18 23:47:43 [ERROR] __main__ (app2.py:84): Ошибка при обработке файла: array length 935 does not match index length 966
+2025-12-19 00:38:46 [ERROR] model (model.py:20): Ошибка загрузки модели: [Errno 2] No such file or directory: 'model_pipeline.pkl'
+2025-12-19 00:42:02 [ERROR] __main__ (app2.py:102): Ошибка при обработке файла: name 'Preprocessor' is not defined
+Traceback (most recent call last):
+  File "d:\YD_Papa\Yandex.Disk\Practicum\practicum_projects\HeartRisk\app2.py", line 78, in predict_web
+    data.drop(columns=[c for c in Preprocessor.COLS_FOR_DROP if c in data.columns], errors="ignore")
+                                  ^^^^^^^^^^^^
+NameError: name 'Preprocessor' is not defined
+2025-12-19 00:54:02 [ERROR] __main__ (app2.py:106): Ошибка при обработке файла: name 'Preprocessor' is not defined
+Traceback (most recent call last):
+  File "d:\YD_Papa\Yandex.Disk\Practicum\practicum_projects\HeartRisk\app2.py", line 82, in predict_web
+    data.drop(columns=[c for c in Preprocessor.COLS_FOR_DROP if c in data.columns], errors="ignore")
+                                  ^^^^^^^^^^^^
+NameError: name 'Preprocessor' is not defined
+2025-12-19 01:09:49 [ERROR] __main__ (app2.py:108): Ошибка при обработке файла: 'id'
+Traceback (most recent call last):
+  File "D:\YD_Papa\Yandex.Disk\Practicum\practicum_projects\HeartRisk\heart_risk_env\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\YD_Papa\Yandex.Disk\Practicum\practicum_projects\HeartRisk\app2.py", line 84, in predict_web
+    data.drop(columns=[c for c in Preprocessor.COLS_FOR_DROP if c in data.columns], errors="ignore")
+  File "D:\YD_Papa\Yandex.Disk\Practicum\practicum_projects\HeartRisk\heart_risk_env\Lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\YD_Papa\Yandex.Disk\Practicum\practicum_projects\HeartRisk\heart_risk_env\Lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'id'
