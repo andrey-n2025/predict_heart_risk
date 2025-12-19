@@ -17,12 +17,14 @@
 ```
 predict_heart_risk/
 ├── heart_train.csv              # Обучающая выборка
-├── heart_test.csv               # Тестовая выборка (с признаками)
-├── heart_test_predict.csv       # Пример предсказаний на тестовой выборке
+├── heart_test.csv               # Тестовая выборка (без целевого признака)
 ├── models/
 │   └── model_pipeline.pkl       # Сохранённый полный Pipeline (sklearn + joblib)
 ├── static/
 │   └── style.css                
+├── tests/
+│   └── heart_test_predict.csv	 # Пример предсказаний на тестовой выборке
+├── test.py                      # Скрипт для локальной оценки
 ├── templates/
 │   └── index.html				 # простой шаблон страницы приложения
 ├── logs/                        # Логи сервиса (создаётся автоматически)
@@ -30,8 +32,8 @@ predict_heart_risk/
 ├── model.py                     # Обёртка над загруженной моделью
 ├── logging_file.py              # Настройка логирования
 ├── app2.py                      # FastAPI-приложение (веб-интерфейс + API)
-├── test.py                      # Скрипт для локальной оценки
 ├── Heart_Risk_research.ipynb    # Тетрадь Jupyter Notebook c исследованием данных и выбором модели с подобранными параметрами
+├── Documentation.pdf            # Документация к проекту
 └── README.md                    # Этот файл
 ```
 
