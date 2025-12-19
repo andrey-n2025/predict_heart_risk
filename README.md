@@ -47,7 +47,7 @@ predict_heart_risk/
 - **joblib** — сериализация полного Pipeline для reproducibility
 - **OOP** — создание классов (`Preprocessor`, `Model`)
 - **Логирование** — централизованная настройка через `logging.config.dictConfig`, RotatingFileHandler
-- **FastAPI** — создание REST API и асинхронных эндпоинтов
+- **FastAPI** — создание REST API
 - **Jinja2 + HTML/CSS** — простой веб-интерфейс для загрузки файлов и визуализации результатов
 - **Uvicorn** — запуск ASGI-сервера
 - фиксированный Pipeline, внешняя предобработка, детальное логирование удалённых строк
