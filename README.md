@@ -45,7 +45,7 @@ predict_heart_risk/
 - **pandas**, **numpy** — анализ и предобработка данных
 - **scikit-learn** — построение Pipeline, обработка имбаланса, кросс-валидация, метрики (F1-score, classification_report)
 - **joblib** — сериализация полного Pipeline для reproducibility
-- **OOP** — инкапсуляция логики в классы (`Preprocessor`, `Model`)
+- **OOP** — создание классов (`Preprocessor`, `Model`)
 - **Логирование** — централизованная настройка через `logging.config.dictConfig`, RotatingFileHandler
 - **FastAPI** — создание REST API и асинхронных эндпоинтов
 - **Jinja2 + HTML/CSS** — простой веб-интерфейс для загрузки файлов и визуализации результатов
