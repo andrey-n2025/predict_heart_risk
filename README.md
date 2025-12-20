@@ -16,15 +16,16 @@
 
 ```
 predict_heart_risk/
-├── heart_train.csv              # Обучающая выборка
-├── heart_test.csv               # Тестовая выборка (без целевого признака)
+├── data/
+│    └── heart_train.csv              # Обучающая выборка
+│    └── heart_test.csv               # Тестовая выборка (без целевого признака)
 ├── models/
 │   └── model_pipeline.pkl       # Сохранённый полный Pipeline (sklearn + joblib)
 ├── static/
 │   └── style.css                
 ├── tests/
 │   └── heart_test_predict.csv	 # Пример предсказаний на тестовой выборке
-├── test.py                      # Скрипт для локальной оценки
+│   └── test.py                  # Скрипт для локальной оценки
 ├── templates/
 │   └── index.html				 # простой шаблон страницы приложения
 ├── logs/                        # Логи сервиса (создаётся автоматически)
