@@ -45,7 +45,6 @@ predict_heart_risk/
 - **Python 3** — основной язык разработки
 - **pandas**, **numpy** — анализ и предобработка данных
 - **scikit-learn** — построение Pipeline, обработка имбаланса, кросс-валидация, метрики (F1-score, classification_report)
-- **joblib** — сериализация полного Pipeline для reproducibility
 - **OOP** — создание классов (`Preprocessor`, `Model`)
 - **Логирование** — централизованная настройка через `logging.config.dictConfig`, RotatingFileHandler
 - **FastAPI** — создание REST API
@@ -73,4 +72,4 @@ python app.py --port 8999
 ## Рекомендации по улучшению
 
 - Экспериментировать с ансамблями (XGBoost, LightGBM, CatBoost) для повышения F1-score на минорном классе
-- Экмперементировать с Инжинирингом признаков
+- Экмперементировать с инжинирингом признаков
